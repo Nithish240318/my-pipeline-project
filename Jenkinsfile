@@ -3,31 +3,27 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                echo 'Cloning repository...'
-                git 'https://github.com/your-username/your-repo.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo 'Building project...'
-                sh 'echo Build completed'
+                echo 'Building...'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh 'echo Tests successful'
+                echo 'Testing...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
-                sh 'echo Deployment done'
+                echo 'Deploying...'
+            }
+        }
+
+        stage('Done') {
+            steps {
+                echo 'Pipeline Finished!'
             }
         }
     }
